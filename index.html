@@ -98,6 +98,22 @@ The <html> element is known as the root element of a HTML page. All other elemen
         // Reset input value
         input.value = "";
       });
+      
+      var enter = document.querySelector('#txtSearch');
+      enter.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        var input = document.querySelector("#input-field");
+        // Store the output of main() in a new variable
+        var result = main(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+    }
+});
     </script>
   </body>
 </html>
